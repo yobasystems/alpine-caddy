@@ -1,22 +1,19 @@
-# Caddy Web Server running on Alpine Linux
+# Caddy Docker image running on Alpine Linux
 
-[![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg)](https://imagelayers.io/?images=yobasystems/alpine-caddy:latest)
+[![Docker Layers](https://img.shields.io/badge/docker%20layers-5-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Size](https://img.shields.io/badge/docker%20size-42.8%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg)](https://imagelayers.io/?images=yobasystems/alpine-caddy:latest)
-
-[![Image Size](https://img.shields.io/imagelayers/image-size/yobasystems/alpine-caddy/latest.svg)](https://imagelayers.io/?images=yobasystems/alpine-caddy:latest)
-
-[![Image Layers](https://img.shields.io/imagelayers/layers/yobasystems/alpine-caddy/latest.svg)](https://imagelayers.io/?images=yobasystems/alpine-caddy:latest)
+[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.4-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Caddy Version](https://img.shields.io/badge/caddy%20version-v0.9.1-green.svg?maxAge=2592000?style=flat-square)](http://nginx.org/en/)
 
 
-[This](https://hub.docker.com/r/yobasystems/alpine-caddy/) Docker image is based on the minimal [Alpine Linux edge](http://alpinelinux.org/) using the Caddy 0.8.2 HTTP/2 web server with  HTTPS. [Caddy](https://caddyserver.com/).
+
+This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) 0.9.1 HTTP/2 web server with  HTTPS.
 
 ## Features
 
-  * Minimal size: ??Mb uncompressed, and only ?? layers.
-  * Memory usage is minimal on a simple install.
-  * Caddy version 0.8.2
-
+  * Minimal size only 42.8 MB and only 5 layers
+  * Memory usage is minimal on a simple install
+  * Caddy version 0.9.1
+  * Memory usage is very small on a simple install.
 
 ## Creating an instance
 
