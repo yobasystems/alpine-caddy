@@ -1,6 +1,6 @@
 # Caddy Docker image running on Alpine Linux
 
-[![Docker Layers](https://img.shields.io/badge/docker%20layers-5-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Size](https://img.shields.io/badge/docker%20size-42.8%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
+[![Docker Layers](https://img.shields.io/badge/docker%20layers-5-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Size](https://img.shields.io/badge/docker%20size-17.1%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
 [![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.4-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Caddy Version](https://img.shields.io/badge/caddy%20version-v0.9.1-green.svg?maxAge=2592000?style=flat-square)](http://nginx.org/en/)
 
@@ -10,7 +10,7 @@ This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasyst
 
 ## Features
 
-  * Minimal size only 42.8 MB and only 5 layers
+  * Minimal size only 17.1 MB and only 5 layers
   * Memory usage is minimal on a simple install
   * Caddy version 0.9.1
   * Memory usage is very small on a simple install.
