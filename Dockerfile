@@ -5,7 +5,7 @@ LABEL alpine_version="3.4" caddy_version="0.9.1" architecture="amd64"
 
 ARG plugins=git
 
-RUN apk add --update openssh-client git tar
+RUN apk add --update openssh-client git tar curl
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
       "https://caddyserver.com/download/build?os=linux&arch=amd64&features=${plugins}" \
