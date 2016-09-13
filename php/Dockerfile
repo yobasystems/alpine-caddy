@@ -27,8 +27,8 @@ RUN curl --silent --show-error --fail --location --header "Accept: application/t
 EXPOSE 80 443 2015
 WORKDIR /srv
 
-COPY Caddyfile /etc/Caddyfile
-COPY index.php /srv/index.php
+COPY files/Caddyfile /etc/Caddyfile
+COPY files/index.php /srv/index.php
 
 RUN chown -R caddy:caddy /srv /var/log
 
