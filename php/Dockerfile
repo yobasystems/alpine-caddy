@@ -1,8 +1,6 @@
 FROM alpine:3.4
 MAINTAINER Dominic Taylor <dominic@yobasystems.co.uk>
 
-LABEL alpine_version="3.4" caddy_version="0.9.1" architecture="amd64"
-
 ARG plugins=git
 
 RUN apk add --no-cache openssh-client git libcap tar php5-fpm curl \
