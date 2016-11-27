@@ -6,7 +6,7 @@
 
 
 
-This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) 0.9.3 HTTP/2 web server with  HTTPS.
+This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) 0.9.3 HTTP/2 web server with HTTPS.
 
 ## Features
 
