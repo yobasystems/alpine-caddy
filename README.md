@@ -24,7 +24,7 @@ This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasyst
 * ```:php``` latest branch with git which auto pulls repo upon container start
 * ```:v0.0.0``` version number related to nginx version
 * ```:armhf``` Armv7 based on latest tag but arm architecture
-* ```:armhf-php``` Armv7 based on latest tag but arm architecture and includes Git
+* ```:armhf-php``` Armv7 based on latest tag but arm architecture and includes PHP
 
 ## Creating an instance
 
