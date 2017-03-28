@@ -13,7 +13,18 @@ This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasyst
   * Minimal size only 17.1 MB and only 5 layers
   * Memory usage is minimal on a simple install
   * Caddy version 0.9.5
-  * Memory usage is very small on a simple install.
+  * Memory usage is very small on a simple install
+  * Armv7 (armhf) version with ```:armhf``` tag
+  * Armv7 (armhf) version with php ```:armhf-php``` tag
+
+## Tags
+
+* ```:latest``` latest nginx & alpine
+* ```:master``` master branch usually inline with latest
+* ```:php``` latest branch with git which auto pulls repo upon container start
+* ```:v0.0.0``` version number related to nginx version
+* ```:armhf``` Armv7 based on latest tag but arm architecture
+* ```:armhf-php``` Armv7 based on latest tag but arm architecture and includes Git
 
 ## Creating an instance
 
