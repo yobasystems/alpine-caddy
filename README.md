@@ -2,17 +2,17 @@
 
 [![Docker Layers](https://img.shields.io/badge/docker%20layers-5-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Size](https://img.shields.io/badge/docker%20size-17.1%20MB-blue.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/) [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?maxAge=2592000?style=flat-square)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
-[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.5-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Caddy Version](https://img.shields.io/badge/caddy%20version-v0.9.5-green.svg?maxAge=2592000?style=flat-square)](https://caddyserver.com/)
+[![Alpine Version](https://img.shields.io/badge/alpine%20version-v3.5-green.svg?maxAge=2592000?style=flat-square)](http://alpinelinux.org/) [![Caddy Version](https://img.shields.io/badge/caddy%20version-v0.10.3-green.svg?maxAge=2592000?style=flat-square)](https://caddyserver.com/)
 
 
 
-This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) 0.9.5 HTTP/2 web server with HTTPS.
+This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) 0.10.3 HTTP/2 web server with HTTPS.
 
 ## Features
 
   * Minimal size only 17.1 MB and only 5 layers
   * Memory usage is minimal on a simple install
-  * Caddy version 0.9.5
+  * Caddy version 0.10.3
   * Memory usage is very small on a simple install
   * Armv7 (armhf) version with ```:armhf``` tag
   * Armv7 (armhf) version with php ```:armhf-php``` tag

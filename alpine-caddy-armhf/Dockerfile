@@ -1,12 +1,12 @@
 FROM armhf/alpine:3.5
 MAINTAINER Dominic Taylor <dominic@yobasystems.co.uk>
 
-ARG plugins=git
+ARG plugins=http.git
 
 RUN apk add --update openssh-client git tar curl
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://caddyserver.com/download/build?os=linux&arch=arm&features=${plugins}" \
+      "https://caddyserver.com/download/linux/arm7?plugins=${plugins}" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \

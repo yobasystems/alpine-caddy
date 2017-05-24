@@ -1,7 +1,7 @@
 FROM armhf/alpine:3.5
 MAINTAINER Dominic Taylor <dominic@yobasystems.co.uk>
 
-ARG plugins=git
+ARG plugins=http.git
 
 RUN apk add --no-cache openssh-client git libcap tar php5-fpm curl \
     php5-curl php5-gd php5-zip php5-iconv php5-sqlite3 php5-mysql php5-mysqli php5-pgsql php5-json php5-phar php5-openssl
@@ -14,7 +14,7 @@ RUN curl --silent --show-error --fail --location \
 RUN echo "clear_env = no" >> /etc/php5/php-fpm.conf
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://caddyserver.com/download/build?os=linux&arch=arm&features=${plugins}" \
+      "https://caddyserver.com/download/linux/arm7?plugins=${plugins}" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy \
  && chmod 0755 /usr/bin/caddy \
  && addgroup -S caddy \
