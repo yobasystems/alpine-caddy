@@ -1,7 +1,7 @@
 FROM alpine:3.5
 MAINTAINER Dominic Taylor <dominic@yobasystems.co.uk>
 
-ARG plugins=git
+ARG plugins=http.git
 
 RUN apk add --no-cache openssh-client git libcap tar php5-fpm curl \
     php5-curl php5-gd php5-zip php5-iconv php5-sqlite3 php5-mysql php5-mysqli php5-pgsql php5-json php5-phar php5-openssl
