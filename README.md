@@ -6,36 +6,41 @@
 
 
 
-This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) 0.10.3 HTTP/2 web server with HTTPS.
+This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
+
+##### Alpine Version 3.6.2 (Released Jun 17, 2017)
+##### Caddy Version 0.10.3
+
+----
+
+## What is Alpine Linux?
+Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with Docker images.
+
+## What is Caddy?
 
 ## Features
 
-  * Minimal size only 17.1 MB and only 5 layers
+  * Minimal size only 20 MB and only 5 layers
   * Memory usage is minimal on a simple install
-  * Caddy version 0.10.3
-  * Memory usage is very small on a simple install
-  * Armv7 (armhf) version with ```:armhf``` tag
-  * Armv7 (armhf) version with php ```:armhf-php``` tag
+  * Auto HTTPS
+
+## Architectures
+
+* ```:amd64```, ```:latest``` - 64 bit Intel/AMD (x86_64/amd64)
+* ```:i386```, ```:x86``` - 32 bit Intel/AMD (x86/i686)
+* ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
+* ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
+
+#### PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
 
 ## Tags
 
-* ```:latest``` latest nginx & alpine
+* ```:latest```, ```:amd64``` latest branch based on amd64
 * ```:master``` master branch usually inline with latest
-* ```:php``` latest branch with git which auto pulls repo upon container start
-* ```:v0.0.0``` version number related to nginx version
-* ```:armhf``` Armv7 based on latest tag but arm architecture
-* ```:armhf-php``` Armv7 based on latest tag but arm architecture and includes PHP
-
-## Creating an instance
-
-
-## Getting Started
-
-```sh
-$ docker run -d --name examplecaddy -p 2015:2015 yobasystems/alpine-caddy
-```
-
-Point your browser to `http://host-ip:2015`.
+* ```:php``` latest branch with php
+* ```:v0.0.0``` version number related to docker version
+* ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm architecture
+* ```:armhf-php```, ```:arm32v7-php``` Armv7 based on latest tag but arm architecture and includes php
 
 
 ## Environment Variables:
@@ -43,6 +48,13 @@ Point your browser to `http://host-ip:2015`.
 ### Main Caddy parameters:
 * `URL`: specify the url with http:// or https://
 
+## Creating an instance
+
+```sh
+$ docker run -d --name examplecaddy -p 2015:2015 yobasystems/alpine-caddy
+```
+
+Point your browser to `http://host-ip:2015`.
 
 ### PHP
 `:[<version>-]php` variant of this image bundles PHP-FPM. e.g. `:php`, `:0.8.0-php`

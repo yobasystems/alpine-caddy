@@ -1,5 +1,5 @@
-FROM alpine:3.5
-MAINTAINER Dominic Taylor <dominic@yobasystems.co.uk>
+FROM yobasystems/alpine:amd64
+LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="AMD64/x86_64"
 
 ARG plugins=http.git
 
