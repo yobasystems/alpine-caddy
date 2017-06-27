@@ -3,8 +3,8 @@ LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM3
 
 ARG plugins=http.git
 
-RUN apk add --no-cache openssh-client git libcap tar php5-fpm curl \
-    php5-curl php5-gd php5-zip php5-iconv php5-sqlite3 php5-mysql php5-mysqli php5-pgsql php5-json php5-phar php5-openssl
+RUN apk add --no-cache openssh-client git libcap tar php7 php7-fpm curl \
+    php7-curl php7-gd php7-zip php7-iconv php7-sqlite3 php7-mysql php7-mysqli php7-pgsql php7-json php7-phar php7-openssl
 
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" \
