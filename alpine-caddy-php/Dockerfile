@@ -4,8 +4,8 @@ LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="AMD6
 ARG plugins=http.git
 
 RUN apk add --no-cache openssh-client git libcap tar php7 php7-fpm curl \
-    php7-curl php7-gd php7-zip php7-iconv php7-sqlite3 php7-mysql php7-mysqli php7-pgsql php7-json php7-phar php7-openssl
-    
+    php7-curl php7-gd php7-zip php7-iconv php7-sqlite3 php7-mysqli php7-pgsql php7-json php7-phar php7-openssl
+
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" \
       "https://getcomposer.org/installer" \
