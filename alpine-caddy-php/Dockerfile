@@ -1,5 +1,5 @@
 FROM yobasystems/alpine:amd64
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="AMD64/x86_64" version="10.9"
+LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="AMD64/x86_64" version="0.10.9"
 
 ARG plugins=http.git
 
