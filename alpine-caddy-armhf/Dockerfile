@@ -1,5 +1,5 @@
 FROM yobasystems/alpine:armhf
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM32v7/armhf"
+LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM32v7/armhf" version="10.9"
 
 ARG plugins=http.git
 
