@@ -1,7 +1,7 @@
-FROM yobasystems/alpine:3.8-armhf
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM32v7/armhf" version="0.11.0" date="07-aug-2018"
+FROM yobasystems/alpine:3.8.1-armhf
+LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM32v7/armhf" alpineversion="3.8.1" caddy-version="0.11.1" build="21-nov-2018"
 
-ARG plugins=http.git
+ARG plugins=http.git,http.cache,http.expires,http.minify,http.realip
 
 RUN apk add --update openssh-client git tar curl
 
