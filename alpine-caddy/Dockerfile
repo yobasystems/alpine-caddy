@@ -10,7 +10,7 @@ RUN curl --silent --show-error --fail --location --header "Accept: application/t
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \
-    adduser -D -S -H -s /sbin/nologin -G caddy caddy && \
+    adduser -D -S -s /sbin/nologin -G caddy caddy && \
     /usr/bin/caddy -version
 
 EXPOSE 80 443 2015
