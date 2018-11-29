@@ -8,7 +8,7 @@
 
 This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
-##### Alpine Version 3.8.1 (Released June 26, 2018)
+##### Alpine Version 3.8.1 (Released September 11, 2018)
 ##### Caddy Version 0.11.1
 
 ----
@@ -42,6 +42,8 @@ Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-en
 * ```:v0.0.0``` version number related to docker version
 * ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm architecture
 * ```:armhf-php```, ```:arm32v7-php``` Armv7 based on latest tag but arm architecture and includes php
+* ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
+* ```:aarch64-php```, ```:arm64v8-php``` Armv8 based on latest tag but arm64 architecture and includes php
 
 
 ## Environment Variables:
