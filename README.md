@@ -5,7 +5,7 @@
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
 [![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.8.1-green.svg?style=for-the-badge)](http://alpinelinux.org/)
-[![Caddy Version](https://img.shields.io/badge/Mariadb%20version-v0.11.1-green.svg?style=for-the-badge)](https://caddyserver.com/)
+[![Caddy Version](https://img.shields.io/badge/Caddy%20version-v0.11.1-green.svg?style=for-the-badge)](https://caddyserver.com/)
 
 
 
