@@ -1,6 +1,6 @@
-FROM yobasystems/alpine:3.8.1-aarch64
+FROM yobasystems/alpine:3.8.2-aarch64
 LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM64v8/aarch64"
-LABEL alpine-version="3.8.1" caddy-version="0.11.1" build="04-dec-2018"
+LABEL alpine-version="3.8.2" caddy-version="0.11.2" build="28-jan-2019"
 
 ARG plugins=http.git,http.cache,http.expires,http.minify,http.realip
 

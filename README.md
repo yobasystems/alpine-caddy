@@ -4,14 +4,14 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.8.1-green.svg?style=for-the-badge)](http://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.8.2-green.svg?style=for-the-badge)](http://alpinelinux.org/)
 [![Caddy Version](https://img.shields.io/badge/Caddy%20version-v0.11.1-green.svg?style=for-the-badge)](https://caddyserver.com/)
 
 
 
 This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
-##### Alpine Version 3.8.1 (Released September 11, 2018)
+##### Alpine Version 3.8.2 (Released December 20, 2018)
 ##### Caddy Version 0.11.1
 
 ----
