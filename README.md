@@ -41,11 +41,11 @@ Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-en
 * ```:master``` master branch usually inline with latest
 * ```:php``` latest branch with php
 * ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
-* ```:amd64-php```, ```:x86_64-php```  amd64 based on latest tag but amd64 architecture and includes php
+* ```:php-amd64```, ```:php-x86_64```  amd64 based on latest tag but amd64 architecture and includes php
 * ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
-* ```:aarch64-php```, ```:arm64v8-php``` Armv8 based on latest tag but arm64 architecture and includes php
+* ```:php-aarch64```, ```:php-arm64v8``` Armv8 based on latest tag but arm64 architecture and includes php
 * ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm architecture
-* ```:armhf-php```, ```:arm32v7-php``` Armv7 based on latest tag but arm architecture and includes php
+* ```:php-armhf```, ```:php-arm32v7``` Armv7 based on latest tag but arm architecture and includes php
 
 ## Layers & Sizes
 
