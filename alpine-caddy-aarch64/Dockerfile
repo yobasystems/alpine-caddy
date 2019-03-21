@@ -1,6 +1,22 @@
-FROM yobasystems/alpine:3.9.0-aarch64
-LABEL maintainer "Dominic Taylor <dominic@yobasystems.co.uk>" architecture="ARM64v8/aarch64"
-LABEL alpine-version="3.9.0" caddy-version="0.11.2" build="05-Feb-2019"
+FROM yobasystems/alpine:3.9.2-aarch64
+
+ARG BUILD_DATE
+ARG VCS_REF
+
+LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
+    architecture="arm64v8/aarch64" \
+    caddy-version="0.11.5" \
+    alpine-version="3.9.2" \
+    build="21-Mar-2019" \
+    org.opencontainers.image.title="alpine-caddy" \
+    org.opencontainers.image.description="Caddy Docker image running on Alpine Linux" \
+    org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
+    org.opencontainers.image.vendor="Yoba Systems" \
+    org.opencontainers.image.version="v0.11.5" \
+    org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
+    org.opencontainers.image.source="https://github.com/yobasystems/alpine-caddy" \
+    org.opencontainers.image.revision=$VCS_REF \
+    org.opencontainers.image.created=$BUILD_DATE
 
 ARG plugins=http.git,http.cache,http.expires,http.minify,http.realip
 

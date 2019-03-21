@@ -4,15 +4,14 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.9.0-green.svg?style=for-the-badge)](http://alpinelinux.org/)
-[![Caddy Version](https://img.shields.io/badge/Caddy%20version-v0.11.2-green.svg?style=for-the-badge)](https://caddyserver.com/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.9.2-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Caddy Version](https://img.shields.io/badge/Caddy%20version-v0.11.5-green.svg?style=for-the-badge)](https://caddyserver.com/)
 
 
+This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](https://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
-This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](http://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
-
-##### Alpine Version 3.9.0 (Released Jan 29, 2019)
-##### Caddy Version 0.11.2
+##### Alpine Version 3.9.2 (Released March 04, 2019)
+##### Caddy Version 0.11.5
 
 ----
 
@@ -24,23 +23,25 @@ Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-en
 
 ## Features
 
-  * Minimal size only, minimal layers
-  * Memory usage is minimal on a simple install
-  * Auto HTTPS
+* Minimal size only, minimal layers
+* Memory usage is minimal on a simple install
+* Auto HTTPS
 
 ## Architectures
 
-* ```:amd64```, ```:latest``` - 64 bit Intel/AMD (x86_64/amd64)
+* ```:amd64```, ```:x86_64``` - 64 bit Intel/AMD (x86_64/amd64)
 * ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
 * ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
 
-#### PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
+##### PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
 
 ## Tags
 
-* ```:latest```, ```:amd64``` latest branch based on amd64
+* ```:latest``` latest branch based (Automatic Architecture Selection)
 * ```:master``` master branch usually inline with latest
 * ```:php``` latest branch with php
+* ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
+* ```:amd64-php```, ```:x86_64-php```  amd64 based on latest tag but amd64 architecture and includes php
 * ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
 * ```:aarch64-php```, ```:arm64v8-php``` Armv8 based on latest tag but arm64 architecture and includes php
 * ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm architecture
