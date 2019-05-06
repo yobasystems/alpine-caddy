@@ -1,4 +1,4 @@
-FROM yobasystems/alpine:3.9.2-armhf
+FROM yobasystems/alpine:3.9.3-armhf
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -6,8 +6,8 @@ ARG VCS_REF
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="arm32v7/armhf" \
     caddy-version="1.0.0" \
-    alpine-version="3.9.2" \
-    build="03-May-2019" \
+    alpine-version="3.9.3" \
+    build="06-May-2019" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy Docker image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
