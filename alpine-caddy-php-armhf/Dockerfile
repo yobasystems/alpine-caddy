@@ -1,18 +1,18 @@
-FROM yobasystems/alpine:3.9.4-armhf
+FROM yobasystems/alpine:3.10.0-armhf
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="arm32v7/armhf" \
-    caddy-version="1.0.0" \
-    alpine-version="3.9.4" \
-    build="24-May-2019" \
+    caddy-version="1.0.1" \
+    alpine-version="3.10.0" \
+    build="15-Jul-2019" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy Docker image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="v1.0.0" \
+    org.opencontainers.image.version="v1.0.1" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-caddy" \
     org.opencontainers.image.revision=$VCS_REF \
