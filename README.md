@@ -10,7 +10,7 @@
 
 This Docker image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](https://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
-##### Alpine Version 3.11.2 (Released October 21, 2019)
+##### Alpine Version 3.11.2 (Released December 24, 2019)
 ##### Caddy Version 1.0.4
 
 ----
