@@ -7,7 +7,7 @@ LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="arm32v7/armhf" \
     caddy-version="1.0.4" \
     alpine-version="3.11.2" \
-    build="16-Jan-2020" \
+    build="17-Jan-2020" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy Docker image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
@@ -35,8 +35,8 @@ EXPOSE 80 443 2015
 VOLUME /srv
 WORKDIR /srv
 
-ADD files/Caddyfile /etc/Caddyfile
-ADD files/index.html /srv/index.html
+COPY files/Caddyfile /etc/Caddyfile
+COPY files/index.html /srv/index.html
 
 RUN chown -R caddy:caddy /srv
 
