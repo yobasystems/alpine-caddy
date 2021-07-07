@@ -27,7 +27,7 @@ RUN curl --silent --show-error --fail --location --header "Accept: application/t
     addgroup -S caddy && \
     adduser -D -S -s /sbin/nologin -G caddy caddy && \
     setcap cap_net_bind_service=+ep `readlink -f /usr/bin/caddy` && \
-    /usr/bin/caddy -version
+    /usr/bin/caddy version
 
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
 
