@@ -21,7 +21,7 @@ LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
 RUN apk add --no-cache openssh-client git tar curl libcap ca-certificates mailcap
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://caddyserver.com/api/download?os=linux&arch=arm64" \
+      "https://github.com/caddyserver/caddy/releases/download/v2.4.3/caddy_2.4.3_linux_arm64.tar.gz" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \

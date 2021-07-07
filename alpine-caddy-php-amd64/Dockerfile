@@ -29,7 +29,7 @@ RUN curl --silent --show-error --fail --location \
 RUN echo "clear_env = no" >> /etc/php7/php-fpm.conf
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://caddyserver.com/api/download?os=linux&arch=amd64" \
+      "https://github.com/caddyserver/caddy/releases/download/v2.4.3/caddy_2.4.3_linux_amd64.tar.gz" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \
