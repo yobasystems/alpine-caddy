@@ -1,29 +1,27 @@
-FROM yobasystems/alpine:3.11.6-aarch64
+FROM yobasystems/alpine:3.14.0-aarch64
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="arm64v8/aarch64" \
-    caddy-version="1.0.5" \
-    alpine-version="3.11.6" \
-    build="26-May-2020" \
+    caddy-version="2.4.3" \
+    alpine-version="3.14.0" \
+    build="07-Jul-2021" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy Docker image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="v1.0.5" \
+    org.opencontainers.image.version="v2.4.3" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-caddy" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
-ARG plugins=http.git,http.cache,http.expires,http.minify,http.realip
-
-RUN apk add --no-cache openssh-client git tar curl libcap
+RUN apk add --no-cache openssh-client git tar curl libcap ca-certificates mailcap
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://caddyserver.com/download/linux/arm64?plugins=${plugins}&license=personal&telemetry=off" \
+      "https://caddyserver.com/api/download?os=linux&arch=arm64" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \
@@ -31,9 +29,10 @@ RUN curl --silent --show-error --fail --location --header "Accept: application/t
     setcap cap_net_bind_service=+ep `readlink -f /usr/bin/caddy` && \
     /usr/bin/caddy -version
 
-EXPOSE 80 443 2015
+RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
+
+VOLUME /config
 VOLUME /srv
-WORKDIR /srv
 
 COPY files/Caddyfile /etc/Caddyfile
 COPY files/index.html /srv/index.html
@@ -42,5 +41,8 @@ RUN chown -R caddy:caddy /srv
 
 USER caddy
 
-ENTRYPOINT ["/usr/bin/caddy"]
-CMD ["--conf", "/etc/Caddyfile"]
+EXPOSE 80 443 2015
+
+WORKDIR /srv
+
+CMD ["caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
