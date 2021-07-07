@@ -43,7 +43,7 @@ VOLUME /config
 VOLUME /srv
 
 COPY files/Caddyfile /etc/Caddyfile
-COPY files/index.html /srv/index.html
+COPY files/index.php /srv/index.php
 
 RUN chown -R caddy:caddy /srv
 
