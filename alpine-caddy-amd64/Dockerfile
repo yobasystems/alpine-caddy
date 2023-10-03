@@ -1,18 +1,18 @@
-FROM yobasystems/alpine:3.15.4-amd64
+FROM yobasystems/alpine:3.18.3-amd64
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="amd64/x86_64" \
-    caddy-version="2.4.6" \
-    alpine-version="3.15.4" \
-    build="23-Apr-2022" \
+    caddy-version="2.7.4" \
+    alpine-version="3.18.3" \
+    build="03-Oct-2023" \
     org.opencontainers.image.title="alpine-caddy" \
-    org.opencontainers.image.description="Caddy Docker image running on Alpine Linux" \
+    org.opencontainers.image.description="Caddy container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="v2.4.6" \
+    org.opencontainers.image.version="v2.7.4" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-caddy" \
     org.opencontainers.image.revision=$VCS_REF \
@@ -21,7 +21,7 @@ LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
 RUN apk add --no-cache openssh-client git tar curl libcap ca-certificates mailcap
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_amd64.tar.gz" \
+      "https://github.com/caddyserver/caddy/releases/download/v2.7.4/caddy_2.7.4_linux_amd64.tar.gz" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \

@@ -1,35 +1,35 @@
-FROM yobasystems/alpine:3.15.4-armhf
+FROM yobasystems/alpine:3.18.3-armhf
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="arm32v7/armhf" \
-    caddy-version="2.4.6" \
-    alpine-version="3.15.4" \
-    build="23-Apr-2022" \
+    caddy-version="2.7.4" \
+    alpine-version="3.18.3" \
+    build="03-Oct-2023" \
     org.opencontainers.image.title="alpine-caddy" \
-    org.opencontainers.image.description="Caddy Docker image running on Alpine Linux" \
+    org.opencontainers.image.description="Caddy container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="v2.4.6-php" \
+    org.opencontainers.image.version="v2.7.4-php" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-caddy" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
-RUN apk add --no-cache openssh-client git libcap tar php7 php7-fpm curl ca-certificates mailcap \
-    php7-curl php7-gd php7-zip php7-iconv php7-sqlite3 php7-mysqli php7-pgsql php7-json php7-phar php7-openssl php7-zlib
+RUN apk add --no-cache openssh-client git libcap tar php81 php81-fpm curl ca-certificates mailcap \
+    php81-curl php81-gd php81-zip php81-iconv php81-sqlite3 php81-mysqli php81-pgsql php81-json php81-phar php81-openssl php81-zlib
 
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" \
       "https://getcomposer.org/installer" \
     | php -- --install-dir=/usr/bin --filename=composer
 
-RUN echo "clear_env = no" >> /etc/php7/php-fpm.conf
+RUN echo "clear_env = no" >> /etc/php81/php-fpm.conf
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://github.com/caddyserver/caddy/releases/download/v2.4.6/caddy_2.4.6_linux_armv7.tar.gz" \
+      "https://github.com/caddyserver/caddy/releases/download/v2.7.4/caddy_2.7.4_linux_armv7.tar.gz" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \
