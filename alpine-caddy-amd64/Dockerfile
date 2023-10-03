@@ -1,4 +1,4 @@
-FROM yobasystems/alpine:3.18.3-amd64
+FROM yobasystems/alpine:3.18.4-amd64
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -6,7 +6,7 @@ ARG VCS_REF
 LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
     architecture="amd64/x86_64" \
     caddy-version="2.7.4" \
-    alpine-version="3.18.3" \
+    alpine-version="3.18.4" \
     build="03-Oct-2023" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy container image running on Alpine Linux" \
