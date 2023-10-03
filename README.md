@@ -10,7 +10,7 @@
 
 This container image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](https://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
-### Alpine Version 3.18.4 (Released 2023-08-07)
+### Alpine Version 3.18.4 (Released 2023-09-28)
 ##### Caddy Version 2.7.4
 
 ----
