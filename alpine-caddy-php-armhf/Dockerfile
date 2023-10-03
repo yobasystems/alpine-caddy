@@ -3,14 +3,14 @@ FROM yobasystems/alpine:3.18.4-armhf
 ARG BUILD_DATE
 ARG VCS_REF
 
-LABEL maintainer="Dominic Taylor <dominic@yobasystems.co.uk>" \
+LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="arm32v7/armhf" \
     caddy-version="2.7.4" \
     alpine-version="3.18.4" \
     build="03-Oct-2023" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy container image running on Alpine Linux" \
-    org.opencontainers.image.authors="Dominic Taylor <dominic@yobasystems.co.uk>" \
+    org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.vendor="Yoba Systems" \
     org.opencontainers.image.version="v2.7.4-php" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
