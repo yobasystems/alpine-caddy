@@ -29,7 +29,7 @@ RUN curl --silent --show-error --fail --location --header "Accept: application/t
     setcap cap_net_bind_service=+ep `readlink -f /usr/bin/caddy` && \
     /usr/bin/caddy version
 
-RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
+RUN echo 'hosts: files dns' > /etc/nsswitch.conf
 
 VOLUME /config
 VOLUME /srv
