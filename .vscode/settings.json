@@ -1,8 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "/Users/dominictaylor/.vscode/extensions/continue.continue-0.0.412-darwin-x64"
-    ],
-    "python.autoComplete.extraPaths": [
-        "/Users/dominictaylor/.vscode/extensions/continue.continue-0.0.412-darwin-x64"
-    ]
-}
