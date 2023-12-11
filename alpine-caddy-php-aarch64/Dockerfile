@@ -24,7 +24,7 @@ RUN apk add --no-cache openssh-client git libcap tar php81 php81-fpm curl ca-cer
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" \
       "https://getcomposer.org/installer" \
-    | php -- --install-dir=/usr/bin --filename=composer
+    | php81 -- --install-dir=/usr/bin --filename=composer
 
 RUN echo "clear_env = no" >> /etc/php81/php-fpm.conf
 
