@@ -31,8 +31,7 @@ amd64 caddy build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:amd64
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:x86_64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:amd64
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:x86_64 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:amd64
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:x86_64 -t ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG}
-    .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:x86_64 -t ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG} --platform linux/amd64 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:amd64
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:x86_64
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -117,7 +116,7 @@ amd64 caddy php build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-amd64
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-x86_64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:php-amd64
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:php-x86_64 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-amd64
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-x86_64 .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-x86_64 --platform linux/amd64 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-amd64
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-x86_64
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -145,7 +144,7 @@ arm32v7 caddy php build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-arm32v7
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:php-arm32v7 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-arm32v7
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-armhf -t $DOCKER_REGISTRY_DOCKERHUB_REPO:php-armhf
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-armhf .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-armhf --platform linux/arm/v7 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-arm32v7
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-armhf
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -173,7 +172,7 @@ arm64v8 caddy php build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-arm64v8
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:php-arm64v8 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-arm64v8
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-aarch64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:php-aarch64
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-aarch64 .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:php-aarch64 --platform linux/arm64/v8 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-arm64v8
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-aarch64
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -201,8 +200,7 @@ amd64 caddy version 2.7.6 build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-amd64
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-x86_64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-amd64
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-x86_64 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-amd64
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-x86_64 -t ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG}
-    .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-x86_64 -t ${CI_APPLICATION_REPOSITORY}:${CI_APPLICATION_TAG} --platform linux/amd64 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-amd64
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-x86_64
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -231,7 +229,7 @@ arm32v7 caddy version 2.7.6 build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-arm32v7
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-arm32v7 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-arm32v7
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-armhf -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-armhf
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-armhf .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-armhf --platform linux/arm/v7 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-arm32v7
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-armhf
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -259,7 +257,7 @@ arm64v8 caddy version 2.7.6 build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-arm64v8
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-arm64v8 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-arm64v8
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-aarch64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-aarch64
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-aarch64 .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-aarch64 --platform linux/arm64/v8 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-arm64v8
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-aarch64
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -287,7 +285,7 @@ amd64 caddy version 2.7.6 php build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-amd64
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-x86_64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-amd64
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-x86_64 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-amd64
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-x86_64 .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-x86_64 --platform linux/amd64 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-amd64
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-x86_64
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -315,7 +313,7 @@ arm32v7 caddy version 2.7.6 php build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-arm32v7
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-arm32v7 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-arm32v7
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-armhf -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-armhf
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-armhf .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-armhf --platform linux/arm/v7 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-arm32v7
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-armhf
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -343,7 +341,7 @@ arm64v8 caddy version 2.7.6 php build:
     --build-arg BUILD_DATE=${COMMIT_TIME} -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-arm64v8
     -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-arm64v8 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-arm64v8
     -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-aarch64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-aarch64
-    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-aarch64 .
+    -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:2.7.6-php-aarch64 --platform linux/arm64/v8 .
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-arm64v8
   - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-aarch64
   - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
@@ -371,9 +369,9 @@ gitlab manifest creation:
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest
 dockerhub manifest creation:
   image: yobasystems/alpine-docker:dind
@@ -392,9 +390,9 @@ dockerhub manifest creation:
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:latest $DOCKER_REGISTRY_DOCKERHUB_REPO:amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:latest $DOCKER_REGISTRY_DOCKERHUB_REPO:arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:latest $DOCKER_REGISTRY_DOCKERHUB_REPO:arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:latest
 gitlab manifest php creation:
   image: yobasystems/alpine-docker:dind
@@ -413,9 +411,9 @@ gitlab manifest php creation:
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php-arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:php
 dockerhub manifest php creation:
   image: yobasystems/alpine-docker:dind
@@ -434,9 +432,9 @@ dockerhub manifest php creation:
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:php $DOCKER_REGISTRY_DOCKERHUB_REPO:php-amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:php $DOCKER_REGISTRY_DOCKERHUB_REPO:php-arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:php $DOCKER_REGISTRY_DOCKERHUB_REPO:php-arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:php
 gitlab version 2.7.6 manifest creation:
   image: yobasystems/alpine-docker:dind
@@ -455,9 +453,9 @@ gitlab version 2.7.6 manifest creation:
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6 $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6 $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6 $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6
 dockerhub version 2.7.6 manifest creation:
   image: yobasystems/alpine-docker:dind
@@ -476,9 +474,9 @@ dockerhub version 2.7.6 manifest creation:
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6 $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6 $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6 $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6
 gitlab version 2.7.6 manifest php creation:
   image: yobasystems/alpine-docker:dind
@@ -497,9 +495,9 @@ gitlab version 2.7.6 manifest php creation:
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php-arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:2.7.6-php
 dockerhub version 2.7.6 manifest php creation:
   image: yobasystems/alpine-docker:dind
@@ -518,9 +516,9 @@ dockerhub version 2.7.6 manifest php creation:
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-amd64
     --os linux --arch amd64
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-arm32v7
-    --os linux --arch arm
+    --os linux --arch arm --variant 7
   - docker manifest annotate $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php-arm64v8
-    --os linux --arch arm64
+    --os linux --arch arm64 --variant 8
   - docker manifest push $DOCKER_REGISTRY_DOCKERHUB_REPO:2.7.6-php
 sast:
   stage: test
