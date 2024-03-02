@@ -1,6 +1,26 @@
 version: 2
 updates:
   - package-ecosystem: docker
-    directory: /
+    directory: /alpine-caddy-amd64/
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /alpine-caddy-armhf/
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /alpine-caddy-aarch64/
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /alpine-caddy-php-amd64/
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /alpine-caddy-php-armhf/
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /alpine-caddy-php-aarch64/
     schedule:
       interval: weekly
