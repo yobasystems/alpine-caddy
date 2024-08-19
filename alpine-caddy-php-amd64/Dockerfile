@@ -19,15 +19,15 @@ LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
-RUN apk add --no-cache openssh-client git libcap tar php81 php81-fpm curl ca-certificates mailcap \
-    php81-curl php81-gd php81-zip php81-iconv php81-sqlite3 php81-mysqli php81-pgsql php81-json php81-phar php81-openssl php81-zlib
+RUN apk add --no-cache openssh-client git libcap tar php83 php83-fpm curl ca-certificates mailcap \
+    php83-curl php83-gd php83-zip php83-iconv php83-sqlite3 php83-mysqli php83-pgsql php83-json php83-phar php83-openssl php83-zlib
 
 RUN curl --silent --show-error --fail --location \
       --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" \
       "https://getcomposer.org/installer" \
-    | php81 -- --install-dir=/usr/bin --filename=composer
+    | php83 -- --install-dir=/usr/bin --filename=composer
 
-RUN echo "clear_env = no" >> /etc/php81/php-fpm.conf
+RUN echo "clear_env = no" >> /etc/php83/php-fpm.conf
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
       "https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.tar.gz" \
