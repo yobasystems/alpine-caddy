@@ -4,14 +4,14 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.20.2-green.svg?style=for-the-badge)](https://alpinelinux.org/)
-[![Caddy Version](https://img.shields.io/badge/Caddy%20version-v2.8.4-green.svg?style=for-the-badge)](https://caddyserver.com/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.21.1-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Caddy Version](https://img.shields.io/badge/Caddy%20version-v2.9.1-green.svg?style=for-the-badge)](https://caddyserver.com/)
 
 
 This container image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](https://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
-### Alpine Version 3.20.2 (Released 2024-07-22)
-##### Caddy Version 2.8.4
+### Alpine Version 3.21.1 (Released 2024-07-22)
+##### Caddy Version 2.9.1
 
 ----
 
@@ -188,29 +188,24 @@ $ docker run -d -v $(pwd)/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/root/.caddy 
 ## 📚 Source Repositories
 
 * [Github - yobasystems/alpine-caddy](https://github.com/yobasystems/alpine-caddy)
-
 * [Gitlab - yobasystems/alpine-caddy](https://gitlab.com/yobasystems/alpine-caddy)
-
 * [Bitbucket - yobasystems/alpine-caddy](https://bitbucket.org/yobasystems/alpine-caddy/)
 
 
 ## 🐳 Container Registries
 
 * [Dockerhub - yobasystems/alpine-caddy](https://hub.docker.com/r/yobasystems/alpine-caddy/)
-
 * [Quay.io - yobasystems/alpine-caddy](https://quay.io/repository/yobasystems/alpine-caddy)
+* [GHCR - yobasystems/alpine-caddy](https://ghcr.io/yobasystems/alpine-caddy)
 
 
 ## 🔗 Links
 
-* [Yoba Systems](https://www.yobasystems.co.uk/)
-
+* [Yoba Systems](https://yoba.systems/)
 * [Github - Yoba Systems](https://github.com/yobasystems/)
-
 * [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
-
 * [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
-
+* [GHCR - Yoba Systems](https://ghcr.io/yobasystems)
 * [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
 
 ## 💰 Donation

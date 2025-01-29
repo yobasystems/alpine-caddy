@@ -1,21 +1,21 @@
-FROM yobasystems/alpine:3.20.2-aarch64
+FROM yobasystems/alpine:3.21.1-aarch64
 
 ARG BUILD_DATE
 ARG VCS_REF
 
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="arm64v8/aarch64" \
-    caddy-version="2.8.4" \
-    alpine-version="3.20.2" \
-    build="19-Aug-2024" \
+    caddy-version="2.9.1" \
+    alpine-version="3.21.1" \
+    build="29-Jan-2025" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.vendor="Yoba Systems" \
-    org.opencontainers.image.version="2.8.4-php" \
+    org.opencontainers.image.version="2.9.1-php" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-caddy" \
-    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.20.2" \
+    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.21.1" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
@@ -30,7 +30,7 @@ RUN curl --silent --show-error --fail --location \
 RUN echo "clear_env = no" >> /etc/php83/php-fpm.conf
 
 RUN curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://github.com/caddyserver/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_arm64.tar.gz" \
+      "https://github.com/caddyserver/caddy/releases/download/v2.9.1/caddy_2.9.1_linux_arm64.tar.gz" \
     | tar --no-same-owner -C /usr/bin/ -xz caddy && \
     chmod 0755 /usr/bin/caddy && \
     addgroup -S caddy && \
