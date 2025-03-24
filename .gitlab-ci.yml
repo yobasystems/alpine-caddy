@@ -59,6 +59,7 @@ arm64v8 caddy build:
 
 sast:
   stage: test
+
 .deploy_template: &deploy_definition
   image: yobasystems/alpine-docker:dind
   stage: deploy

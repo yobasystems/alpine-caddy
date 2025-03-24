@@ -1,4 +1,4 @@
-FROM yobasystems/alpine:3.21.2-aarch64
+FROM yobasystems/alpine:3.21.3-aarch64
 
 ARG BUILD_DATE
 ARG VCS_REF
@@ -6,8 +6,8 @@ ARG VCS_REF
 LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     architecture="arm64v8/aarch64" \
     caddy-version="2.9.1" \
-    alpine-version="3.21.2" \
-    build="31-Jan-2025" \
+    alpine-version="3.21.3" \
+    build="24-Mar-2025" \
     org.opencontainers.image.title="alpine-caddy" \
     org.opencontainers.image.description="Caddy container image running on Alpine Linux" \
     org.opencontainers.image.authors="Dominic Taylor <dominic@yoba.systems>" \
@@ -15,7 +15,7 @@ LABEL maintainer="Dominic Taylor <dominic@yoba.systems>" \
     org.opencontainers.image.version="2.9.1-php" \
     org.opencontainers.image.url="https://hub.docker.com/r/yobasystems/alpine-caddy/" \
     org.opencontainers.image.source="https://github.com/yobasystems/alpine-caddy" \
-    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.21.2" \
+    org.opencontainers.image.base.name="docker.io/yobasystems/alpine:3.21.3" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
 
