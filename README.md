@@ -5,13 +5,13 @@
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
 [![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.1-green.svg?style=for-the-badge)](https://alpinelinux.org/)
-[![Caddy Version](https://img.shields.io/badge/Caddy%20version-v2.10.0-green.svg?style=for-the-badge)](https://caddyserver.com/)
+[![Caddy Version](https://img.shields.io/badge/Caddy%20version-v2.10.2-green.svg?style=for-the-badge)](https://caddyserver.com/)
 
 
 This container image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](https://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
 ### Alpine Version 3.22.1 (Released 2025-07-15)
-##### Caddy Version 2.10.0
+##### Caddy Version 2.10.2
 
 ----
 
@@ -64,15 +64,12 @@ Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-en
 ## 📏 Layers & Sizes
 
 ![Version](https://img.shields.io/badge/version-amd64-blue.svg?style=for-the-badge)
-![Docker Image Version (tag)](https://img.shields.io/docker/v/yobasystems/alpine-caddy/amd64.svg?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-caddy/amd64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-aarch64-blue.svg?style=for-the-badge)
-![Docker Image Version (tag)](https://img.shields.io/docker/v/yobasystems/alpine-caddy/aarch64.svg?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-caddy/aarch64.svg?style=for-the-badge)
 
 ![Version](https://img.shields.io/badge/version-armhf-blue.svg?style=for-the-badge)
-![Docker Image Version (tag)](https://img.shields.io/docker/v/yobasystems/alpine-caddy/armhf.svg?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-caddy/armhf.svg?style=for-the-badge)
 
 ## 🚀 How to use this image
@@ -189,7 +186,6 @@ $ docker run -d -v $(pwd)/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/root/.caddy 
 
 * [Github - yobasystems/alpine-caddy](https://github.com/yobasystems/alpine-caddy)
 * [Gitlab - yobasystems/alpine-caddy](https://gitlab.com/yobasystems/alpine-caddy)
-* [Bitbucket - yobasystems/alpine-caddy](https://bitbucket.org/yobasystems/alpine-caddy/)
 
 
 ## 🐳 Container Registries
