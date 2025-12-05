@@ -4,16 +4,16 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 [![Docker Stars](https://img.shields.io/docker/stars/yobasystems/alpine-caddy.svg?style=for-the-badge&logo=docker)](https://hub.docker.com/r/yobasystems/alpine-caddy/)
 
-[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.22.2-green.svg?style=for-the-badge)](https://alpinelinux.org/)
+[![Alpine Version](https://img.shields.io/badge/Alpine%20version-v3.23.0-green.svg?style=for-the-badge)](https://alpinelinux.org/)
 [![Caddy Version](https://img.shields.io/badge/Caddy%20version-v2.10.2-green.svg?style=for-the-badge)](https://caddyserver.com/)
 
+This container image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](https://alpinelinux.org/) using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
 
-This container image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobasystems/alpine-caddy/) is based on the minimal [Alpine Linux](https://alpinelinux.org/)  using the [Caddy](https://caddyserver.com/) HTTP/2 web server with HTTPS.
+### Alpine Version 3.23.0 (Released 2025-12-03)
 
-### Alpine Version 3.22.2 (Released 2025-10-08)
 ##### Caddy Version 2.10.2
 
-----
+---
 
 ## Table of Contents
 
@@ -29,37 +29,36 @@ This container image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobas
 - [Links](#links)
 - [Donation](#donation)
 
-
 ## 🏔️ What is Alpine Linux?
+
 Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with Container images.
 
 ## What is Caddy?
+
 Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-enabled web server written in Go. It uses the Go standard library for its HTTP functionality. One of Caddy's most notable features is enabling HTTPS by default.
 
 ## ✨ Features
 
-* Minimal size only, minimal layers
-* Memory usage is minimal on a simple install.
-* Auto git clone from repo with `yobasystems/alpine-nginx:git` tag
+- Minimal size only, minimal layers
+- Memory usage is minimal on a simple install.
+- Auto git clone from repo with `yobasystems/alpine-nginx:git` tag
 
 ## 🏗️ Architectures
 
-* ```:amd64```, ```:x86_64``` - 64 bit Intel/AMD (x86_64/amd64)
-* ```:arm64v8```, ```:aarch64``` - 64 bit ARM (ARMv8/aarch64)
-* ```:arm32v7```, ```:armhf``` - 32 bit ARM (ARMv7/armhf)
-
-#### 📝 PLEASE CHECK TAGS BELOW FOR SUPPORTED ARCHITECTURES, THE ABOVE IS A LIST OF EXPLANATION
+- `:amd64`, `:x86_64` - 64 bit Intel/AMD (x86_64/amd64)
+- `:arm64v8`, `:aarch64` - 64 bit ARM (ARMv8/aarch64)
+- `:arm32v7`, `:armhf` - 32 bit ARM (ARMv7/armhf)
 
 ## 🏷️ Tags
 
-* ```:latest``` latest branch based (Automatic Architecture Selection)
-* ```:php``` latest branch with php
-* ```:amd64```, ```:x86_64```  amd64 based on latest tag but amd64 architecture
-* ```:php-amd64```, ```:php-x86_64```  amd64 based on latest tag but amd64 architecture and includes php
-* ```:aarch64```, ```:arm64v8``` Armv8 based on latest tag but arm64 architecture
-* ```:php-aarch64```, ```:php-arm64v8``` Armv8 based on latest tag but arm64 architecture and includes php
-* ```:armhf```, ```:arm32v7``` Armv7 based on latest tag but arm architecture
-* ```:php-armhf```, ```:php-arm32v7``` Armv7 based on latest tag but arm architecture and includes php
+- `:latest` latest branch based (Automatic Architecture Selection)
+- `:php` latest branch with php
+- `:amd64`, `:x86_64` amd64 based on latest tag but amd64 architecture
+- `:php-amd64`, `:php-x86_64` amd64 based on latest tag but amd64 architecture and includes php
+- `:aarch64`, `:arm64v8` Armv8 based on latest tag but arm64 architecture
+- `:php-aarch64`, `:php-arm64v8` Armv8 based on latest tag but arm64 architecture and includes php
+- `:armhf`, `:arm32v7` Armv7 based on latest tag but arm architecture
+- `:php-armhf`, `:php-arm32v7` Armv7 based on latest tag but arm architecture and includes php
 
 ## 📏 Layers & Sizes
 
@@ -73,10 +72,12 @@ Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-en
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yobasystems/alpine-caddy/armhf.svg?style=for-the-badge)
 
 ## 🚀 How to use this image
+
 ## Environment Variables:
 
 ### Main Caddy parameters:
-* `URL`: specify the url with http:// or https://
+
+- `URL`: specify the url with http:// or https://
 
 ## Creating an instance
 
@@ -87,21 +88,27 @@ $ docker run -d --name examplecaddy -p 2015:2015 yobasystems/alpine-caddy
 Point your browser to `http://host-ip:2015`.
 
 ### PHP
+
 `:[<version>-]php` variant of this image bundles PHP-FPM. e.g. `:php`, `:0.11.0-php`
+
 ```sh
 $ docker run -d --name examplecaddy -p 2015:2015 yobasystems/alpine-caddy:php
 ```
+
 Point your browser to `http://host-ip:2015` and you will see a php info page.
 
 ##### Local php source
 
 Replace `/path/to/php/src` with your php sources directory.
+
 ```sh
 $ docker run -d --name examplecaddy -v /path/to/php/src:/srv -p 2015:2015 yobasystems/alpine-caddy:php
 ```
+
 Point your browser to `http://host-ip:2015`.
 
 ##### Note
+
 Your `Caddyfile` must include the line `startup php-fpm`. For Caddy to be PID 1 in the container, php-fpm could not be started.
 
 ### Using git sources
@@ -121,6 +128,7 @@ $ printf "0.0.0.0\ngit github.com/team/repo" > Caddyfile
 ```sh
 $ docker run -d --name examplecaddy -v $(pwd)/Caddyfile:/etc/Caddyfile -p 2015:2015 yobasystems/alpine-caddy
 ```
+
 Point your browser to `http://host-ip:2015`.
 
 ## Usage
@@ -135,6 +143,7 @@ browse
 fastcgi / 127.0.0.1:9000 php # php variant only
 startup php-fpm # php variant only
 ```
+
 **Note** the last 2 lines are only present in the php variant.
 
 #### Paths in container
@@ -152,10 +161,12 @@ $ docker run -d --name examplecaddy -v /path/to/sites/root:/srv -v path/to/Caddy
 ```
 
 ### Let's Encrypt Auto SSL
+
 **Note** that this does not work on local environments, the domain also has to resolve to the server requesting the certificate.
 
 Use a valid domain and add email to your Caddyfile to avoid prompt at runtime.
 Replace `example.co.uk` with your domain and `user@example.co.uk` with your email.
+
 ```
 example.co.uk
 tls user@example.co.uk
@@ -178,28 +189,25 @@ $ docker run -d -v $(pwd)/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/root/.caddy 
 
 ## 🔍 Image contents & Vulnerability analysis
 
-| PACKAGE NAME          | PACKAGE VERSION | VULNERABILITIES |
-|-----------------------|-----------------|-----------------|
-
+| PACKAGE NAME | PACKAGE VERSION | VULNERABILITIES |
+| ------------ | --------------- | --------------- |
 
 ## 📚 Source Repositories
 
-* [Github - yobasystems/alpine-caddy](https://github.com/yobasystems/alpine-caddy)
-* [Gitlab - yobasystems/alpine-caddy](https://gitlab.com/yobasystems/alpine-caddy)
-
+- [Github - yobasystems/alpine-caddy](https://github.com/yobasystems/alpine-caddy)
+- [Gitlab - yobasystems/alpine-caddy](https://gitlab.com/yobasystems/alpine-caddy)
 
 ## 🐳 Container Registries
 
-* [Dockerhub - yobasystems/alpine-caddy](https://hub.docker.com/r/yobasystems/alpine-caddy/)
-* [Quay.io - yobasystems/alpine-caddy](https://quay.io/repository/yobasystems/alpine-caddy)
-* [GHCR - yobasystems/alpine-caddy](https://ghcr.io/yobasystems/alpine-caddy)
-
+- [Dockerhub - yobasystems/alpine-caddy](https://hub.docker.com/r/yobasystems/alpine-caddy/)
+- [Quay.io - yobasystems/alpine-caddy](https://quay.io/repository/yobasystems/alpine-caddy)
+- [GHCR - yobasystems/alpine-caddy](https://ghcr.io/yobasystems/alpine-caddy)
 
 ## 🔗 Links
 
-* [Yoba Systems](https://yoba.systems/)
-* [Github - Yoba Systems](https://github.com/yobasystems/)
-* [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
-* [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
-* [GHCR - Yoba Systems](https://ghcr.io/yobasystems)
-* [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
+- [Yoba Systems](https://yoba.systems/)
+- [Github - Yoba Systems](https://github.com/yobasystems/)
+- [Dockerhub - Yoba Systems](https://hub.docker.com/u/yobasystems/)
+- [Quay.io - Yoba Systems](https://quay.io/organization/yobasystems)
+- [GHCR - Yoba Systems](https://ghcr.io/yobasystems)
+- [Maintainer - Dominic Taylor](https://github.com/dominictayloruk)
