@@ -27,7 +27,6 @@ This container image [(yobasystems/alpine-caddy)](https://hub.docker.com/r/yobas
 - [Source Repositories](#source-repositories)
 - [Container Registries](#container-registries)
 - [Links](#links)
-- [Donation](#donation)
 
 ## 🏔️ What is Alpine Linux?
 
@@ -41,7 +40,6 @@ Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-en
 
 - Minimal size only, minimal layers
 - Memory usage is minimal on a simple install.
-- Auto git clone from repo with `yobasystems/alpine-nginx:git` tag
 
 ## 🏗️ Architectures
 
@@ -75,14 +73,12 @@ Caddy, sometimes clarified as the Caddy web server, is an open source, HTTP/2-en
 
 ## Environment Variables:
 
-### Main Caddy parameters:
-
 - `URL`: specify the url with http:// or https://
 
 ## Creating an instance
 
 ```sh
-$ docker run -d --name examplecaddy -p 2015:2015 yobasystems/alpine-caddy
+$ docker run -d --name examplecaddy -p 2015:2015 yobasystems/alpine-caddy:latest
 ```
 
 Point your browser to `http://host-ip:2015`.
@@ -126,7 +122,7 @@ $ printf "0.0.0.0\ngit github.com/team/repo" > Caddyfile
 ##### Run the image
 
 ```sh
-$ docker run -d --name examplecaddy -v $(pwd)/Caddyfile:/etc/Caddyfile -p 2015:2015 yobasystems/alpine-caddy
+$ docker run -d --name examplecaddy -v $(pwd)/Caddyfile:/etc/Caddyfile -p 2015:2015 yobasystems/alpine-caddy:latest
 ```
 
 Point your browser to `http://host-ip:2015`.
@@ -157,7 +153,7 @@ Sites root: `/srv`
 Replace `/path/to/Caddyfile` and `/path/to/sites/root` accordingly.
 
 ```sh
-$ docker run -d --name examplecaddy -v /path/to/sites/root:/srv -v path/to/Caddyfile:/etc/Caddyfile -p 2015:2015 yobasystems/alpine-caddy
+$ docker run -d --name examplecaddy -v /path/to/sites/root:/srv -v path/to/Caddyfile:/etc/Caddyfile -p 2015:2015 yobasystems/alpine-caddy:latest
 ```
 
 ### Let's Encrypt Auto SSL
@@ -177,14 +173,14 @@ tls user@example.co.uk
 You can change the the ports if ports 80 and 443 are not available on host. e.g. 81:80, 444:443
 
 ```sh
-$ docker run -d --name examplecaddy -v $(pwd)/Caddyfile:/etc/Caddyfile -p 80:80 -p 443:443 yobasystems/alpine-caddy
+$ docker run -d --name examplecaddy -v $(pwd)/Caddyfile:/etc/Caddyfile -p 80:80 -p 443:443 yobasystems/alpine-caddy:latest
 ```
 
 **Optional** but advised. Save certificates on host machine to prevent regeneration every time container starts.
 Let's Encrypts [RATE LIMITS](https://community.letsencrypt.org/t/rate-limits-for-lets-encrypt/6769) explain the number of times you can regenerate certificates.
 
 ```sh
-$ docker run -d -v $(pwd)/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/root/.caddy -p 80:80 -p 443:443 yobasystems/alpine-caddy
+$ docker run -d -v $(pwd)/Caddyfile:/etc/Caddyfile -v $HOME/.caddy:/root/.caddy -p 80:80 -p 443:443 yobasystems/alpine-caddy:latest
 ```
 
 ## 🔍 Image contents & Vulnerability analysis
