@@ -1,0 +1,10 @@
+services:
+  caddy:
+    image: yobasystems/alpine-caddy:latest
+    container_name: caddy
+    restart: always
+    ports:
+      - "2015:2015"
+    volumes:
+      - ./Caddyfile:/etc/Caddyfile
+      - ./www:/srv
