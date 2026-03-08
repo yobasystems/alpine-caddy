@@ -1,0 +1,86 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+.gitlab
+.github
+
+# Documentation
+README.md
+CONTRIBUTING.md
+LICENSE
+CODEOWNERS
+CHANGELOG.md
+*.md
+
+# CI/CD
+.gitlab-ci.yml
+.travis.yml
+.circleci
+Jenkinsfile
+
+# Docker files (prevent recursive builds)
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Test and coverage
+tests/
+test/
+coverage/
+.coverage
+*.test
+*.spec
+
+# Build artifacts
+dist/
+build/
+*.log
+*.tar
+*.tar.gz
+*.tgz
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Node modules (if applicable)
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+
+# Python (if applicable)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
