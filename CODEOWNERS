@@ -1,0 +1,40 @@
+# CODEOWNERS - Define code ownership and automatic PR reviewers
+# 
+# These owners will be automatically requested for review when a pull request
+# affects files that they own.
+#
+# For more information, see:
+# - GitHub: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# - GitLab: https://docs.gitlab.com/ee/user/project/codeowners/
+
+# Default owner for everything in the repo
+* @dominictayloruk
+
+# Dockerfile changes
+/Dockerfile @dominictayloruk
+/*/Dockerfile @dominictayloruk
+
+# Documentation
+/README.md @dominictayloruk
+/CONTRIBUTING.md @dominictayloruk
+/.env.example @dominictayloruk
+
+# Docker Compose
+/docker-compose.yml @dominictayloruk
+
+# CI/CD Configuration
+/.gitlab-ci.yml @dominictayloruk
+/.github/ @dominictayloruk
+
+# Configuration files
+/*.conf @dominictayloruk
+/*.yaml @dominictayloruk
+/*.yml @dominictayloruk
+
+# Shell scripts
+/*.sh @dominictayloruk
+/*/files/*.sh @dominictayloruk
+
+# Security-sensitive files
+LICENSE @dominictayloruk
+.gitignore @dominictayloruk
