@@ -79,14 +79,17 @@ container_scanning_aarch64:
     CS_DOCKERFILE_PATH: "alpine-caddy-aarch64/Dockerfile"
 
 sbom_amd64:
+  image: yobasystems/alpine-docker:amd64-dind
   tags:
     - amd64
 
 sbom_armhf:
+  image: yobasystems/alpine-docker:armhf-dind
   tags:
     - armhf
 
 sbom_aarch64:
+  image: yobasystems/alpine-docker:aarch64-dind
   tags:
     - aarch64
 
