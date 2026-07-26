@@ -64,22 +64,25 @@ container_scanning_amd64:
   tags:
     - amd64
   variables:
-    GIT_STRATEGY: fetch
     CS_DOCKERFILE_PATH: "alpine-caddy-amd64/Dockerfile"
+    CS_IMAGE: "yobasystems/alpine:3.24.1"
+    TRIVY_PLATFORM: "linux/amd64"
 
 container_scanning_armhf:
   tags:
-    - amd64 # Use amd64 runner as there isnt an image for armhf or aarch64
+    - aarch64 # Use aarch64 runner as there isnt an image for armhf
   variables:
-    GIT_STRATEGY: fetch
     CS_DOCKERFILE_PATH: "alpine-caddy-armhf/Dockerfile"
+    CS_IMAGE: "yobasystems/alpine:3.24.1"
+    TRIVY_PLATFORM: "linux/arm"
 
 container_scanning_aarch64:
   tags:
-    - amd64
+    - aarch64
   variables:
-    GIT_STRATEGY: fetch
     CS_DOCKERFILE_PATH: "alpine-caddy-aarch64/Dockerfile"
+    CS_IMAGE: "yobasystems/alpine:3.24.1"
+    TRIVY_PLATFORM: "linux/arm64"
 
 sbom_amd64:
   image: yobasystems/alpine-docker:amd64-dind
